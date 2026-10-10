@@ -1,5 +1,5 @@
 // This address is for testing while the API runs on your own computer.
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://neuro-x-sepia.vercel.app/predict";
 
 const form = document.getElementById("ticketForm");
 const message = document.getElementById("message");
