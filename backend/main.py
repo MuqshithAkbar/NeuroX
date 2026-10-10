@@ -1,3 +1,5 @@
+# Lets your local webpage send requests to this API from the browser.
+from fastapi.middleware.cors import CORSMiddleware
 import threading
 import uuid
 from datetime import datetime, timedelta, timezone
@@ -73,6 +75,17 @@ MAX_BODY_BYTES = 5 * 1024 * 1024
 
 # Create the API application.
 app = FastAPI(title="NeuroX Ticket Classifier")
+
+# Allow the VS Code Live Server webpage to call your local API.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://127.0.0.1:5500",
+        "http://localhost:5500",
+    ],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "X-API-Key"],
+)x
 
 
 def make_error(status_code, code, message, details=None, headers=None):

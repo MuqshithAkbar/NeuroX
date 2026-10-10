@@ -3,62 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ticket Classification System</title>
-
+    <title>NeuroX Ticket Classifier</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div class="container">
-
-        <h1>Ticket Classification System</h1>
-
-        <p>Enter your support ticket below.</p>
+    <main class="container">
+        <h1>NeuroX Ticket Classifier</h1>
+        <p>Enter a support ticket to predict its category and team.</p>
 
         <form id="ticketForm">
+            <label for="channel">Ticket channel</label>
+            <select id="channel" required>
+                <option value="email">Email</option>
+                <option value="chat">Chat</option>
+                <option value="call_transcript">Call transcript</option>
+            </select>
 
-            <label>Ticket Title</label>
-            <input
-                type="text"
-                id="title"
-                placeholder="Enter ticket title"
-                required
-            >
+            <label for="title">Ticket title / email subject</label>
+            <input id="title" type="text" placeholder="For example: Refund not received">
 
-            <label>Ticket Description</label>
-            <textarea
-                id="description"
-                placeholder="Describe the problem"
-                required
-            ></textarea>
+            <label for="description">Ticket text</label>
+            <textarea id="description" placeholder="Describe the customer's issue" required></textarea>
 
-            <button type="submit">
-                Predict Category
-            </button>
+            <!-- Enter the key only for your local demo. Do not save it in this file. -->
+            <label for="apiKey">API key (local demo)</label>
+            <input id="apiKey" type="password" placeholder="Paste the key for this test" required>
 
+            <button id="submitButton" type="submit">Predict category</button>
         </form>
 
-        <div id="result" class="result">
+        <p id="message" role="status"></p>
 
-            <h2>AI Result</h2>
-
-            <p>
-                <strong>Category:</strong>
-                <span id="category">-</span>
-            </p>
-
-            <p>
-                <strong>Assigned Team:</strong>
-                <span id="team">-</span>
-            </p>
-
-        </div>
-
-    </div>
+        <section id="result" class="result" hidden>
+            <h2>Prediction</h2>
+            <p><strong>Category:</strong> <span id="category"></span></p>
+            <p><strong>Assigned team:</strong> <span id="team"></span></p>
+            <p><strong>Urgent:</strong> <span id="urgent"></span></p>
+            <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
