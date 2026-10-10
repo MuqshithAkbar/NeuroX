@@ -85,7 +85,7 @@ app.add_middleware(
     ],
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type", "X-API-Key"],
-)x
+)
 
 
 def make_error(status_code, code, message, details=None, headers=None):
