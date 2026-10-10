@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ticket Classification System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Ticket Classification System</h1>
+
+        <p>Enter your support ticket below.</p>
+
+        <form id="ticketForm">
+
+            <label>Ticket Title</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter ticket title"
+                required
+            >
+
+            <label>Ticket Description</label>
+            <textarea
+                id="description"
+                placeholder="Describe the problem"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Predict Category
+            </button>
+
+        </form>
+
+        <div id="result" class="result">
+
+            <h2>AI Result</h2>
+
+            <p>
+                <strong>Category:</strong>
+                <span id="category">-</span>
+            </p>
+
+            <p>
+                <strong>Assigned Team:</strong>
+                <span id="team">-</span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
