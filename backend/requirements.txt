@@ -1,0 +1,13 @@
+# Match the package versions used to save the trained model
+scikit-learn==1.9.1
+pandas==3.0.5
+numpy==2.5.3
+scipy==1.18.1
+joblib==1.6.0
+
+# Build and run the web API
+fastapi
+uvicorn[standard]
+
+# Check requests against the competition's JSON schemas
+jsonschema

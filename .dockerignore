@@ -1,0 +1,13 @@
+# Keep local secrets and development files out of the image
+.env
+.git/
+.venv/
+**/__pycache__/
+*.py[cod]
+
+# These are not needed by the running API
+dataSets/
+trained_model/model_dev.ipynb
+trained_model/README.md
+TensorForge2.0_Phase2_MVP_Guidelines.pdf
+API specs and schemas/*.zip
