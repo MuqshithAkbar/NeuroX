@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "app.py": {
+      "includeFiles": [
+        "trained_model/saved_models/neurox-v1/**",
+        "API specs and schemas/*.json"
+      ]
+    }
+  }
+}

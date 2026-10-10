@@ -1,0 +1,2 @@
+# Reuse the backend's existing dependency list.
+-r backend/requirements.txt
