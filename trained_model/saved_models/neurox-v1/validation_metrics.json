@@ -1,0 +1,6 @@
+{
+  "main_category_accuracy": 0.58625,
+  "urgency_accuracy": 0.96125,
+  "secondary_accuracy": 0.955,
+  "secondary_accuracy_when_present": 0.55
+}
