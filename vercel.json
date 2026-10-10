@@ -1,7 +1,7 @@
 {
   "functions": {
     "app.py": {
-      "includeFiles": "**/*"
+      "includeFiles": "{trained_model/saved_models/neurox-v1/**,API specs and schemas/*.json}"
     }
   }
 }
